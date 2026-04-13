@@ -1,0 +1,8 @@
+Hello, my name is Jayanta Samanta. I am from West Medinipur.
+ I completed my Bachelor of Computer Applications (BCA) degree from Panskura Banamali College in 2025 with a CGPA of 6.73.
+ Currently, I am pursuing my Master of Computer Applications (MCA) at HIT, Haldia.
+Thank you.
+Append operation happen./nFirst line /n Second line /nThird line
+First line 
+ Second line 
+Third line

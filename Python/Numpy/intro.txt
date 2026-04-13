@@ -1,0 +1,34 @@
+NumPy (Numerical Python) is a powerful open-source Python library used 
+for numerical and scientific computing. It provides support for working 
+with arrays, matrices, and mathematical operations efficiently.
+
+Why do we use NumPy?
+
+1.High Performance:
+NumPy is implemented in C
+Much faster than Python lists for calculations
+
+2.Vectorized Operations
+Perform operations on entire data without loops
+
+3.Memory Efficient
+Stores elements of the same data type
+Uses less memory than lists
+
+4.Powerful Mathematical Functions
+Built-in functions like:
+mean()
+sum()
+std()
+min(), max()
+
+5.Multi-dimensional Arrays
+Supports 1D, 2D, 3D arrays (matrices)
+
+6. Useful Methods
+reshape()
+flatten()
+transpose()
+zeros()
+ones()
+arange()

@@ -64,3 +64,42 @@ import shutil
 shutil.copyfile("demo.txt","My_info.txt")
 
 print(os.path.exists("demo.txt"))
+
+#data serialization
+import json
+data={"name":"jayanta","age":20,"emial":"xyz@gmail.com"}
+json_str=json.dumps(data)
+print(json_str)
+print(type(json_str))
+
+json_dic=json.loads(json_str)
+print(json_dic)
+print(type(json_dic))
+
+
+##datetime
+
+from datetime import datetime,timedelta,date
+now=datetime.now()  #print date + time today
+print(now)
+
+yesterday=now-timedelta(days=1)
+print(yesterday)  # print date + time yesterday
+
+today=date.today()
+print(now.strftime("%d-%m-%y"))  #print only date
+
+time=datetime.now().time()
+print(now.strftime("%H:%M:%S")) #print only time
+
+##csv
+import csv
+
+with open ("demo.csv",mode="w",newline="") as f:
+   writer=csv.writer(f)
+   writer.writerow(["massege"])
+   writer.writerow(["hello my name is jayanta."])
+with open("demo.csv",mode='r') as f:
+   read=csv.reader(f)
+   for row in read:
+      print(row)
