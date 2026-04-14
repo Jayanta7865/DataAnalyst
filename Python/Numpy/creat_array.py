@@ -15,14 +15,14 @@ print(two_d)
 ##Multi-dimensional array
 ##A multi-dimensional array in NumPy is an array that has more than one dimension (axes).
 # It can be 2D, 3D, or higher, and is used to store data in a structured format like tables, matrices, or even cubes.
-
+import numpy as np
 multi_d=np.array([[[1,2], [3,4]],
                  [[5,6], [7,8]]]
                  )
 print(multi_d)
 
 print(multi_d.ndim) # return the number of dimensional of array
-
+print(multi_d.shape)
 ### creat array using pyhton list
 
 arr=np.array([
