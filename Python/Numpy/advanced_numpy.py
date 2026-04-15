@@ -42,7 +42,7 @@ print(new_2d1)
 arr_1=np.array([1,2,3])
 arr_2=np.array([4,5,6])
 new_array=np.concatenate((arr_1,arr_2))
-print(new_array)
+print("con",new_array)
 
 ##remove element in an array
 ##syntax=np.delete(array,index,axis=none/0/1)
