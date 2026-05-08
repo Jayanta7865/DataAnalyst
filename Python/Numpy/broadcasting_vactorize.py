@@ -14,8 +14,8 @@
 import numpy as np
 prices=np.array([100,200,350,400])
 discount=10
-aftre_dis=prices-(prices*10/100)
-print(aftre_dis)
+after_dis=prices-(prices*10/100)
+print(after_dis)
 
 
 arr1=np.array([[1,2,3],[4,5,6]])

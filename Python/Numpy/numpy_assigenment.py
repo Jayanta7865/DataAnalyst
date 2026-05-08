@@ -110,14 +110,50 @@ print("After reshape 5,5\n",re_shape)
 # ### Assignment 8: Fancy Indexing and Boolean Indexing
 
 # 1. Create a NumPy array of shape (5, 5) filled with random integers. Use fancy indexing to extract the elements at the corners of the array.
+five_mat1=np.random.randint(1,20,size=(5,5))
+print("5,5 matrix:\n",five_mat1)
+fancy_index=five_mat1[[0,0,-1,-1],[0,-1,0,-1]]
+print("After indexing\n",fancy_index)
+
 # 2. Create a NumPy array of shape (4, 4) filled with random integers. Use boolean indexing to set all elements greater than 10 to 10.
+four_mat1=np.random.randint(1,20,size=(4,4))
+print("4,4 matrix:\n",four_mat1)
+boolen_index=four_mat1[four_mat1>10]
+print("After indexing",boolen_index)
 
 # ### Assignment 9: Structured Arrays
 
 # 1. Create a structured array with fields 'name' (string), 'age' (integer), and 'weight' (float). Add some data and sort the array by age.
+data_type=[('name','U10'),('age','i4'),("weight",'f4')]
+data=np.array([('jayanta',22,65.34),('Mahadeb',23,60.45),('sumana',21,55.55)],dtype=data_type)
+print("Original data\n",data)
+sorted_data=np.sort(data,order='age')
+print("Sorted array\n",sorted_data)
 # 2. Create a structured array with fields 'x' and 'y' (both integers). Add some data and compute the Euclidean distance between each pair of points.
+data_t=[('x','i4'),('y','i4')]
+data=np.array([(1,2),(3,4),(5,6)],dtype=data_t)
+print("Original data\n",data)
+distances = np.sqrt((data['x'][:, np.newaxis] - data['x'])**2 + (data['y'][:, np.newaxis] - data['y'])**2)
+print("Euclidean distances:")
+print(distances)
 
 # ### Assignment 10: Masked Arrays
 
 # 1. Create a masked array of shape (4, 4) with random integers and mask the elements greater than 10. Compute the sum of the unmasked elements.
+import numpy.ma as ma
+four_mat=np.random.randint(1,20,size=(4,4))
+print("4,4 matrix:\n",four_mat)
+masked=ma.masked_greater(four_mat,10)
+print("Masked array:",masked)
+print("Sum of unmaske array element:")
+print(np.sum(masked))
 # 2. Create a masked array of shape (3, 3) with random integers and mask the diagonal elements. Replace the masked elements with the mean of the unmasked elements.
+three_mat1=np.random.randint(1,20,size=(3,3))
+print("3,3 matrix:\n",three_mat1)
+digonal=ma.masked_array(three_mat1,mask=np.eye(3,dtype=bool))
+print("Masked array\n",digonal)
+mean=digonal.mean()
+print("mean of unmasked element:",mean)
+masked_arr=digonal.filled(mean)
+print("Modified array:\n",masked_arr)
+
